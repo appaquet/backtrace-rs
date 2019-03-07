@@ -38,7 +38,7 @@ libc = { version = "0.2.45", default-features = false }
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3.3", features = ["dbghelp", "processthreadsapi", "winnt", "minwindef"] }
 
-[target.'cfg(all(unix, not(target_os = "fuchsia"), not(target_os = "emscripten"), not(target_os = "macos"), not(target_os = "ios")))'.dependencies]
+[target.'cfg(all(unix, not(target_os = "fuchsia"), not(target_os = "emscripten"), not(target_os = "macos"), not(target_os = "ios"), not(target_os = "watchos")))'.dependencies]
 backtrace-sys = { path = "backtrace-sys", version = "0.1.17", optional = true }
 
 [build-dependencies]
